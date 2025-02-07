@@ -143,7 +143,7 @@ class AF_ServerInfo:
 
     def get_story_progress(self) -> str | None:
         """
-        Returns game string indicating story progress state
+        Returns game string indicating story progress
         """
 
         data = self.get_info()

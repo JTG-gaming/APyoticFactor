@@ -7,7 +7,7 @@ class AF_ServerInfo:
 
     Args:
         ip_address: IP or Domain Name for the server
-        query_port [Default: 27015]: Query Port for the server
+        query_port: [Default: 27015] Query Port for the server
 
     Use get_info() for a dict of server rules
     Also includes a few miscellaneous get_[rule] functions for specific common info (server name, short code, player count, etc.)
@@ -55,7 +55,7 @@ class AF_ServerInfo:
         Returns server rules in dict format (key,value pairs)
 
         Args:
-            return_as_bytes [default: False]: returns the raw packet without parsing into dict
+            return_as_bytes: [default: False] returns the raw packet without parsing into dict
         """
 
         # Send Packet with header data
@@ -132,9 +132,9 @@ class AF_ServerInfo:
 
     def get_player_count(self) -> int | None:
         """
-        Returns number of players online
+        Returns online player count
         """
-
+        
         data = self.get_info()
         if data:
             return data['PlayerCount']

@@ -1,4 +1,3 @@
-import typing
 import socket
 
 class AF_ServerInfo:
